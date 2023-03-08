@@ -1,0 +1,15 @@
+@media(max-width: 425px) {
+    .content-box{
+        padding: 30px;
+
+        .advice-container{
+            h2{
+                font-size: .9rem;
+            }
+            
+            p{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

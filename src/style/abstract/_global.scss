@@ -1,0 +1,22 @@
+@import './variables';
+
+html{
+    font-family: $font;
+    font-size: 62.5%;
+
+    body::-webkit-scrollbar {
+        display: none;  
+    }
+
+    p, h2, img{
+        -webkit-touch-callout: none; 
+        -webkit-user-select: none;
+        -khtml-user-select: none;     
+        -moz-user-select: none;       
+        -ms-user-select: none;        
+        user-select: none;            
+    }
+}
+
+
+

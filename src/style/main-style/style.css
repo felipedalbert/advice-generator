@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Manrope", sans-serif;
+  font-size: 62.5%;
+}
+html body::-webkit-scrollbar {
+  display: none;
+}
+html p, html h2, html img {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.content-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(218, 23%, 16%);
+}
+.content-box .advice-container {
+  max-width: 400px;
+  background-color: hsl(217, 19%, 24%);
+  padding: 30px 30px 50px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  box-shadow: rgba(32, 32, 41, 0.2) 0px 7px 29px 0px;
+  position: relative;
+}
+.content-box .advice-container h2 {
+  color: hsl(150, 100%, 66%);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+.content-box .advice-container p {
+  color: hsl(193, 38%, 86%);
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  width: 95%;
+}
+.content-box .advice-container picture {
+  margin-top: 10px;
+  width: 95%;
+  text-align: center;
+}
+.content-box .advice-container picture img, .content-box .advice-container picture source {
+  max-width: 100%;
+}
+.content-box .advice-container button {
+  position: absolute;
+  bottom: -20px;
+  padding: 22px;
+  background-color: hsl(150, 100%, 66%);
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  background: url(../../images/icon-dice.svg) center center no-repeat hsl(150, 100%, 66%);
+  background-size: 15px;
+}
+.content-box .advice-container button:hover {
+  background-color: hsl(150, 52%, 49%);
+}
+.content-box .advice-container button.rotate-animation {
+  animation: spin 0.5s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=style.css.map */
