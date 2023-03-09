@@ -33,6 +33,5 @@ async function showAdvice(){
     },1000)   
 }
 
-
 btn.addEventListener('click', showAdvice)
 
