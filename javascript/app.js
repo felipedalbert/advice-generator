@@ -2,12 +2,12 @@ const btn = document.getElementById('advice-btn');
 const idAdivice = document.getElementById('id-advice')
 const textAdvice = document.getElementById('advice-text')
 
-async function gerarConselho(){
+async function createAdvice(){
     let resolve = await fetch('https://api.adviceslip.com/advice')
     return await resolve.json()
 }
 
-async function exibirConselho(){
+async function showAdvice(){
 
     idAdivice.innerHTML = 'Searching'
 
@@ -19,7 +19,7 @@ async function exibirConselho(){
         </div>
     `
 
-    let objAdvice = await gerarConselho()
+    let objAdvice = await createAdvice()
     setTimeout(async ()=>{
         console.log(objAdvice)
         idAdivice.innerHTML = `Advice: #${objAdvice.slip.id}`
@@ -40,7 +40,7 @@ function spinAnimation(){
 
 btn.addEventListener('click', ()=>{
 
-    exibirConselho()
+    showAdvice()
 
     spinAnimation()
     
