@@ -29,7 +29,7 @@ async function showAdvice(){
         setTimeout(()=>{
             btn.classList.remove('rotate-animation')
             btn.disabled = false  
-        },100)
+        },50)
     },1000)   
 }
 
