@@ -29,7 +29,7 @@ html p, html h2, html img {
 }
 @keyframes await-request {
   from {
-    background-color: rgb(233, 90, 74);
+    background-color: rgb(255, 94, 94);
   }
 }
 @keyframes loading {
@@ -52,7 +52,7 @@ html p, html h2, html img {
 }
 @keyframes await-request {
   from {
-    background-color: rgb(233, 90, 74);
+    background-color: rgb(255, 94, 94);
   }
 }
 @keyframes loading {
