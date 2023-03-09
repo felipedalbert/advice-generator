@@ -8,6 +8,9 @@ async function gerarConselho(){
 }
 
 async function exibirConselho(){
+
+    idAdivice.innerHTML = 'Searching'
+
     textAdvice.innerHTML = `
         <div class="loading">
             <span></span>
@@ -15,12 +18,13 @@ async function exibirConselho(){
             <span></span>
         </div>
     `
+
     let objAdvice = await gerarConselho()
     setTimeout(async ()=>{
         console.log(objAdvice)
-        idAdivice.innerHTML = `Adivce: #${objAdvice.slip.id}`
+        idAdivice.innerHTML = `Advice: #${objAdvice.slip.id}`
         textAdvice.innerHTML = `${objAdvice.slip.advice}`
-    },1500)
+    },1700)
     
 }
 
