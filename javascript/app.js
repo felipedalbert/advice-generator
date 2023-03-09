@@ -16,9 +16,12 @@ async function exibirConselho(){
         </div>
     `
     let objAdvice = await gerarConselho()
-    console.log(objAdvice)
-    idAdivice.innerHTML = `Adivce: #${objAdvice.slip.id}`
-    textAdvice.innerHTML = `${objAdvice.slip.advice}`
+    setTimeout(async ()=>{
+        console.log(objAdvice)
+        idAdivice.innerHTML = `Adivce: #${objAdvice.slip.id}`
+        textAdvice.innerHTML = `${objAdvice.slip.advice}`
+    },1500)
+    
 }
 
 function spinAnimation(){

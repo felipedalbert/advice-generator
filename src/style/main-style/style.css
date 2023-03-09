@@ -148,7 +148,7 @@ html p, html h2, html img {
 }
 .content-box .advice-container button.rotate-animation {
   animation: spin 0.6s;
-  background-color: rgb(233, 90, 74);
+  background-color: rgb(247, 78, 59);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
