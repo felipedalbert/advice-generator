@@ -8,6 +8,8 @@ async function createAdvice(){
 }
 
 async function showAdvice(){
+    btn.classList.add('rotate-animation')
+    btn.disabled = true
 
     idAdivice.innerHTML = 'Searching'
 
@@ -21,28 +23,16 @@ async function showAdvice(){
 
     let objAdvice = await createAdvice()
     setTimeout(async ()=>{
-        console.log(objAdvice)
         idAdivice.innerHTML = `Advice: #${objAdvice.slip.id}`
         textAdvice.innerHTML = `${objAdvice.slip.advice}`
-    },1700)
-    
+
+        setTimeout(()=>{
+            btn.classList.remove('rotate-animation')
+            btn.disabled = false  
+        },100)
+    },1000)   
 }
 
-function spinAnimation(){
-    btn.classList.add('rotate-animation')
-    
-    btn.disabled = true
-    setTimeout(()=>{
-        btn.classList.remove('rotate-animation')
-        btn.disabled = false
-    },2000)
-}
 
-btn.addEventListener('click', ()=>{
-
-    showAdvice()
-
-    spinAnimation()
-    
-})
+btn.addEventListener('click', showAdvice)
 
