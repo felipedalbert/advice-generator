@@ -12,7 +12,7 @@
 <body>
     <main class="content-box">
         <div class="advice-container">
-            <h2>Advice #117</h2>
+            <h2 id="id-advice">Advice #117</h2>
 
             <p id="advice-text">"It is easy to sit up and take notice, what's difficult is getting up and talking action"</p>
 
@@ -25,17 +25,6 @@
         </div>
     </main>
 
-    <script>
-        btn = document.getElementById('advice-btn');
-
-        btn.addEventListener('click', ()=>{
-            btn.classList.add('rotate-animation')
-            btn.disabled = true
-            setTimeout(()=>{
-                btn.classList.remove('rotate-animation')
-                btn.disabled = false
-            },600)
-        })
-    </script>
+    <script src="javascript/app.js"></script>
 </body>
 </html>

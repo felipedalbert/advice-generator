@@ -27,6 +27,69 @@ html p, html h2, html img {
     transform: rotate(180deg);
   }
 }
+@keyframes await-request {
+  from {
+    background-color: rgb(233, 90, 74);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes await-request {
+  from {
+    background-color: rgb(233, 90, 74);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.loading span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #e8ede9;
+  animation: loading 0.9s infinite;
+}
+
+.loading span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
 .content-box {
   width: 100vw;
   height: 100vh;
@@ -78,12 +141,14 @@ html p, html h2, html img {
   cursor: pointer;
   background: url(../../images/icon-dice.svg) center center no-repeat hsl(150, 100%, 66%);
   background-size: 15px;
+  transition: ease-in-out 0.2s;
 }
 .content-box .advice-container button:hover {
   background-color: hsl(150, 52%, 49%);
 }
 .content-box .advice-container button.rotate-animation {
-  animation: spin 0.5s;
+  animation: spin 0.6s;
+  background-color: rgb(233, 90, 74);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;

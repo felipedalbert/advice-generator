@@ -1,6 +1,7 @@
 @import '../abstract/reset';
 @import '../abstract/global';
 @import '../animations/keyframes';
+@import '../animations/loading';
 
 .content-box{
     width: 100vw;
@@ -58,14 +59,15 @@
             cursor: pointer;
             background: url(../../images/icon-dice.svg) center center no-repeat $advice-dice-color;
             background-size: 15px;
-            // transition: ease-in-out .2s;
+            transition: ease-in-out .2s;
 
             &:hover{
                 background-color: $advice-dice-color-hover;
             }
 
             &.rotate-animation{
-                animation: spin .5s;
+                animation: spin .6s;
+                background-color: rgb(233, 90, 74);
                 user-select: none;
             }
         }
