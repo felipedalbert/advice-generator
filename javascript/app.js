@@ -22,7 +22,7 @@ async function showAdvice(){
     `
 
     let objAdvice = await createAdvice()
-    setTimeout(async ()=>{
+    setTimeout(()=>{
         idAdivice.innerHTML = `Advice: #${objAdvice.slip.id}`
         textAdvice.innerHTML = `${objAdvice.slip.advice}`
 
